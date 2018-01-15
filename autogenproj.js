@@ -190,7 +190,6 @@ function tasks(dirName, path) {
 exports.defaultGenerateProject = function (dirName, path) {
     if (tasks(dirName, path) === 0) console.log('项目生成完毕');
     else console.log('项目生成失败');
-
 };
 
 /**
@@ -206,7 +205,6 @@ exports.defaultGenerateProjectOpenEditor = function (dirName, path, editorName, 
     if (tasks(dirName, path) === 0) console.log('项目生成完毕');
     else console.log('项目生成失败');
     exports.openEditor(editorName, editorPath);
-
 };
 
 /**
