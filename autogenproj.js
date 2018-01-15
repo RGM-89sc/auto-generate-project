@@ -187,7 +187,7 @@ function tasks(dirName, path) {
  * @param {string} path 项目父目录路径
  * @return {number} 返回-1表示发生错误，返回0表示执行成功
  */
-exports.defaultGenerateProject = function (dirName, path) {
+exports.defaultGenerateProject = (dirName, path) => {
     if (tasks(dirName, path) === 0) console.log('项目生成完毕');
     else console.log('项目生成失败');
 };
@@ -201,7 +201,7 @@ exports.defaultGenerateProject = function (dirName, path) {
  * @param {string} editorPath 编辑器路径
  * @return {number} 返回-1表示发生错误，返回0表示执行成功
  */
-exports.defaultGenerateProjectOpenEditor = function (dirName, path, editorName, editorPath) {
+exports.defaultGenerateProjectOpenEditor = (dirName, path, editorName, editorPath) => {
     if (tasks(dirName, path) === 0) console.log('项目生成完毕');
     else console.log('项目生成失败');
     exports.openEditor(editorName, editorPath);
@@ -217,7 +217,7 @@ exports.defaultGenerateProjectOpenEditor = function (dirName, path, editorName, 
  * @param {string} JSFileName JS初始文件名，仅当genFile为true时有效
  * @return {Object} 返回值
  */
-exports.GenerateProject = function (dirName, path, genFile, CSSFileName, JSFileName) {
+exports.GenerateProject = (dirName, path, genFile, CSSFileName, JSFileName) => {
     if (tasks(dirName, path, genFile, CSSFileName, JSFileName) === 0)
         console.log('项目生成完毕');
     else console.log('项目生成失败');
