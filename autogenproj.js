@@ -185,7 +185,7 @@ exports.openEditor = (editorName, path) => {
  *
  * @param {string} path 项目父目录路径
  * @param {string} dirName 项目目录名
- * @return {number} 返回1表示发送错误，返回0表示执行成功
+ * @return {number} 返回-1表示发送错误，返回0表示执行成功
  */
 function tasks(path, dirName) {
     function success(val) {
